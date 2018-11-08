@@ -1,6 +1,7 @@
 {
   "name": "crassa-material-ui",
   "version": "1.0.0",
+  "homepage": "https://grovertb.github.io/crassa-material-ui",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +9,9 @@
     "build": "crassa build",
     "dev": "crassa dev",
     "lint": "crassa lint",
-    "count": "crassa count-lines"
+    "count": "crassa count-lines",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +25,8 @@
       "sagas": "./src/sagas",
       "components": "./src/components",
       "containers": "./src/containers",
-      "api": "./src/api"
+      "api": "./src/api",
+      "sources": "./src/sources"
     }
   },
   "_moduleAliases": {
@@ -32,7 +36,8 @@
     "sagas": "./src/sagas",
     "components": "./src/components",
     "containers": "./src/containers",
-    "api": "./src/api"
+    "api": "./src/api",
+    "sources": "./src/sources"
   },
   "jest": {
     "moduleNameMapper": {
@@ -65,6 +70,7 @@
     "redux-saga": "0.16.2"
   },
   "devDependencies": {
+    "gh-pages": "2.0.1",
     "redux-devtools": "3.4.1",
     "redux-devtools-dock-monitor": "1.1.3",
     "redux-devtools-log-monitor": "1.4.0"
