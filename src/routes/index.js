@@ -10,8 +10,16 @@ const Dashboard = loadable(() => import(/* webpackChunkName: "Dashboard" */ 'con
   modules         : [ 'containers/Dashboard' ]
 })
 
+const Home = loadable(() => import(/* webpackChunkName: "Home" */ 'containers/Home'), {
+  LoadingComponent: () => <Loading />,
+  modules         : [ 'containers/Home' ]
+})
+
 export default history => (
-  <ConnectedRouter history={history}>
-    <Route component={Dashboard} exact path='/' />
+  <ConnectedRouter history={history} >
+    <Dashboard history={history} >
+      <Route component={Home} exact path={`${process.env.PUBLIC_URL}/`} />
+    </Dashboard>
+    {/* <Route component={Dashboard} exact path={`${process.env.PUBLIC_URL}/`} /> */}
   </ConnectedRouter>
 )

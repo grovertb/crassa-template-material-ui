@@ -42,16 +42,21 @@
       "sagas": "<rootDir>/src/sagas",
       "components": "<rootDir>/src/components",
       "containers": "<rootDir>/src/containers",
-      "api": "<rootDir>/src/api"
+      "api": "<rootDir>/src/api",
+      "sources": "<rootDir>/src/sources"
     }
   },
   "dependencies": {
+    "@material-ui/core": "3.4.0",
+    "@material-ui/icons": "3.0.1",
     "crassa": "0.2.9",
+    "extensible-duck": "1.4.0",
     "loadable-components": "2.2.3",
     "react": "16.6.0",
     "react-dom": "16.6.0",
     "react-helmet": "5.2.0",
     "react-hot-loader": "4.3.11",
+    "react-jss": "8.6.1",
     "react-redux": "5.1.0",
     "react-router-dom": "4.3.1",
     "react-router-redux": "5.0.0-alpha.9",
@@ -64,5 +69,10 @@
     "redux-devtools-dock-monitor": "1.1.3",
     "redux-devtools-log-monitor": "1.4.0"
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
