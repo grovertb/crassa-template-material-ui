@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/crassa-material-ui/precache-manifest.6a670168f67723d19ca0392f7647d1c6.js"
+  "/crassa-material-ui/precache-manifest.591b1ddf32fe5223d686417a2990c2fc.js"
 );
 
 workbox.clientsClaim();
