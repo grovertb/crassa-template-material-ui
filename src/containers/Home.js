@@ -63,7 +63,7 @@ class Home extends Component {
             <a
               className='App-link' href='https://reactjs.org' rel='noopener noreferrer'
               target='_blank'>
-              create-react-app-v2
+              crassa v0.3.0
             </a>
           </header>
         </div>

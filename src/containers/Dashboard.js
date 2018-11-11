@@ -16,7 +16,7 @@ class Dashboard extends Component {
               <MenuIcon />
             </IconButton>
             <Typography color='inherit' variant='h5'>
-              create-react-app-v2-boilerplate-redux-saga-material-ui
+              crassa-material-ui
             </Typography>
           </Toolbar>
         </AppBar>

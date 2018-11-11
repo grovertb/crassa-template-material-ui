@@ -54,7 +54,7 @@
   "dependencies": {
     "@material-ui/core": "3.4.0",
     "@material-ui/icons": "3.0.1",
-    "crassa": "0.2.9",
+    "crassa": "0.3.0",
     "extensible-duck": "1.4.0",
     "loadable-components": "2.2.3",
     "react": "16.6.0",
