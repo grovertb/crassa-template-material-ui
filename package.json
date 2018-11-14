@@ -12,7 +12,7 @@
     "count": "crassa count-lines",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b gh-pages -d build",
-    "lint-staged":"lint-staged"
+    "lint-staged": "lint-staged"
   },
   "keywords": [],
   "author": "",
@@ -79,7 +79,6 @@
   "pre-commit": "lint-staged",
   "lint-staged": {
     "{src,server}/**/*.js": [
-      "prettier-eslint --write \"{src,server}/**/*.js\"",
       "eslint . --ext .js --fix",
       "git add"
     ]
