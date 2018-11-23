@@ -15,11 +15,15 @@ const Home = loadable(() => import(/* webpackChunkName: "Home" */ 'containers/Ho
   modules         : [ 'containers/Home' ]
 })
 
-export default history => (
-  <ConnectedRouter history={history} >
-    <Dashboard history={history} >
-      <Route component={Home} exact path={`${process.env.PUBLIC_URL}/`} />
-    </Dashboard>
-    {/* <Route component={Dashboard} exact path={`${process.env.PUBLIC_URL}/`} /> */}
-  </ConnectedRouter>
-)
+export default history => {
+  const pathUrl = process.env.PUBLIC_URL ? process.env.PUBLIC_URL : '/'
+
+  return (
+    <ConnectedRouter history={history} >
+      <Dashboard history={history} >
+        <Route component={Home} exact path={pathUrl} />
+      </Dashboard>
+      {/* <Route component={Dashboard} exact path={`${process.env.PUBLIC_URL}/`} /> */}
+    </ConnectedRouter>
+  )
+}

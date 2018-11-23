@@ -1,8 +1,7 @@
 {
   "name": "crassa-material-ui",
   "version": "1.0.0",
-  "homepage": "https://grovertb.github.io/crassa-material-ui",
-  "description": "",
+  "description": "CRASSA with Material-UI",
   "main": "index.js",
   "scripts": {
     "start": "crassa start",
@@ -53,17 +52,17 @@
     }
   },
   "dependencies": {
-    "@material-ui/core": "3.4.0",
+    "@material-ui/core": "3.5.1",
     "@material-ui/icons": "3.0.1",
-    "crassa": "0.3.0",
+    "crassa": "git://github.com/grovertb/crassa.git",
     "extensible-duck": "1.4.0",
     "loadable-components": "2.2.3",
-    "react": "16.6.0",
-    "react-dom": "16.6.0",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
     "react-helmet": "5.2.0",
-    "react-hot-loader": "4.3.11",
+    "react-hot-loader": "4.3.12",
     "react-jss": "8.6.1",
-    "react-redux": "5.1.0",
+    "react-redux": "5.1.1",
     "react-router-dom": "4.3.1",
     "react-router-redux": "5.0.0-alpha.9",
     "redux": "4.0.1",
@@ -72,7 +71,7 @@
   },
   "devDependencies": {
     "gh-pages": "2.0.1",
-    "redux-devtools": "3.4.1",
+    "redux-devtools": "3.4.2",
     "redux-devtools-dock-monitor": "1.1.3",
     "redux-devtools-log-monitor": "1.4.0"
   },

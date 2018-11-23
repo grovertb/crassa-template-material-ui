@@ -13,10 +13,19 @@ import 'components/App.css'
 
 class Home extends Component {
   state = {
-    checkedB: false
+    checkedB: false,
+    loaded  : false
+  }
+
+  componentDidMount() {
+    this.setState({
+      loaded: true
+    })
   }
 
   render() {
+    const { loaded } = this.state
+
     const {
       theme: { style },
       updateTheme
@@ -56,7 +65,7 @@ class Home extends Component {
         </label>
         <div className='App'>
           <header className='App-header'>
-            <img alt='logo' className='App-logo' src={logo} />
+            { loaded && <img alt='logo' className='App-logo' src={logo} /> }
             <Typography color='inherit' variant='h5'>
               Edit <code>src/containers/Home.js</code> and save to reload.
             </Typography>
