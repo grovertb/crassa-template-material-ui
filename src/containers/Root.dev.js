@@ -33,14 +33,6 @@ class Root extends Component {
   render() {
     const { store, children } = this.props
 
-    // return (
-    //   <Provider store={store}>
-    //     <div>
-    //       {children}
-    //       <DevTools />
-    //     </div>
-    //   </Provider>
-    // )
     return (
       <MuiThemeProvider theme={muiTheme}>
         <Provider store={store}>
