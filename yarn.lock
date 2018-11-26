@@ -2763,10 +2763,10 @@ cosmiconfig@^5.0.0, cosmiconfig@^5.0.2, cosmiconfig@^5.0.5, cosmiconfig@^5.0.6:
     js-yaml "^3.9.0"
     parse-json "^4.0.0"
 
-crassa@^0.3.7:
-  version "0.3.7"
-  resolved "https://registry.yarnpkg.com/crassa/-/crassa-0.3.7.tgz#bd39e431bc695ed6a418035341dff9442e565e6e"
-  integrity sha512-SePcqfY92gqg1DyKiZmWmSQZ68UGBO8ZadPwzhgIIW4Vc+Fo8zzgk/2JiTqt86QtTYLPqZ/A9MpDn48Ym3cU9A==
+crassa@0.3.9:
+  version "0.3.9"
+  resolved "https://registry.yarnpkg.com/crassa/-/crassa-0.3.9.tgz#f04352d2d819cfef622128e440e7331a2f4fbc46"
+  integrity sha512-RhwwEcQ82z5vt8LlsG6LHHwhFobtzGQODQBz9ACyWUUNmVegakdGCXAaUTNbYNv0vS58gTqSy1Wkc1yXBZwWKw==
   dependencies:
     "@babel/plugin-proposal-class-properties" "7.1.0"
     "@babel/plugin-proposal-decorators" "7.1.2"

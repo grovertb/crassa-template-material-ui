@@ -1,4 +1,5 @@
 import express from 'express'
+import v1 from './v1'
 
 const router = express.Router()
 
@@ -8,10 +9,10 @@ router.use((req, res, next) => {
   next()
 })
 
+router.use('/v1', v1)
+
 router.get('/', (req, res) => {
-  res.json({
-    test: 'ready'
-  })
+  res.send('API')
 })
 
 export default router
