@@ -2,7 +2,7 @@ import base from './base'
 import produce from 'immer'
 
 export default base({
-  namespace   : 'boilerplate',
+  namespace   : 'crassa',
   store       : 'theme',
   initialState: {
     style: 'ligth'
