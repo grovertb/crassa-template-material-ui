@@ -24,7 +24,7 @@ export const http = function() {
     mode       : 'no-cors'
   })
 
-  // instance.defaults.headers.common['Authorization'] = localStorage.getItem('token')
+  instance.defaults.headers.common['Authorization'] = localStorage.getItem('token')
 
   return instance
 }
