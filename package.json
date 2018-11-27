@@ -2,7 +2,6 @@
   "name": "crassa-material-ui",
   "version": "1.0.0",
   "description": "CRASSA with Material-UI",
-  "homepage2": "https://grovertb.github.io/crassa-material-ui/",
   "main": "index.js",
   "scripts": {
     "start": "crassa start",
