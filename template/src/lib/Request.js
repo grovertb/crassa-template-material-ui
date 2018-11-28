@@ -2,9 +2,9 @@ import axios from 'axios'
 
 require('axios-debug-log')
 
-const { REACT_APP_API_VERSION } = process.env
+const { REACT_APP_REST_API_LOCATION = 'http://localhost:5000', REACT_APP_API_VERSION = 'v1' } = process.env
 
-export const baseURL = '/api/' + REACT_APP_API_VERSION + '/'
+export const baseURL =  `${REACT_APP_REST_API_LOCATION}/api/${REACT_APP_API_VERSION}/`
 
 function serialize(obj) {
   var str = []
@@ -23,8 +23,6 @@ export const http = function() {
     cancelToken: _source.token,
     mode       : 'no-cors'
   })
-
-  // instance.defaults.headers.common['Authorization'] = localStorage.getItem('token')
 
   return instance
 }

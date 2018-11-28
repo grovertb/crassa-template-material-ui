@@ -1,3 +1,4 @@
+import { WAIT_FOR_ACTION } from 'redux-wait-for-action'
 import base from './base'
 
 export default base({
@@ -7,7 +8,7 @@ export default base({
     items: []
   }
 }).extend({
-  creators: ({ types: { FETCH } }) => ({
-    getProducts: () => ({ type: FETCH })
+  creators: ({ types: { FETCH, FETCH_FULFILLED } }) => ({
+    getProducts: () => ({ type: FETCH, [ WAIT_FOR_ACTION ]: FETCH_FULFILLED })
   })
 })
