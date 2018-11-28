@@ -3,7 +3,7 @@ const router = express.Router()
 
 router.get('/', (req, res) => {
   res.json({
-    data: [
+    items: [
       {
         id  : 1,
         name: 'zapatillas nike'
