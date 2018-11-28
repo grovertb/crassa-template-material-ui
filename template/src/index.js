@@ -8,7 +8,9 @@ import App from './App'
 if(module.hot) module.hot.accept()
 
 const render = Component => {
-  ReactDOM.render(
+  const renderMethod = !!module.hot ? ReactDOM.render : ReactDOM.hydrate
+
+  renderMethod(
     <AppContainer key={Math.random()}>
       <Component />
     </AppContainer>,
