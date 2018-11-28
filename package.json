@@ -1,5 +1,5 @@
 {
-  "name": "crassa-material-ui",
+  "name": "{-- project-name --}",
   "version": "1.0.0",
   "description": "CRASSA with Material-UI",
   "main": "index.js",
@@ -17,7 +17,7 @@
   "author": "",
   "license": "ISC",
   "crassa": {
-    "displayName": "crassa-material-ui",
+    "displayName": "{-- project-name --}",
     "aliases": {
       "utils": "./src/utils",
       "lib": "./src/lib",
@@ -54,7 +54,7 @@
   "dependencies": {
     "@material-ui/core": "3.6.0",
     "@material-ui/icons": "3.0.1",
-    "crassa": "0.4.2",
+    "crassa": "{-- project-version --}",
     "axios":"0.18.0",
     "axios-debug-log":"0.4.0",
     "extensible-duck": "1.4.0",
