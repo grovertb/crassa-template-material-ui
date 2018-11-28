@@ -82,8 +82,9 @@ class Home extends Component {
 }
 
 export default connect(
-  ({ theme }) => ({
-    theme
+  ({ theme, products }) => ({
+    theme,
+    products
   }),
   {
     updateTheme: themeReducer.creators.updateTheme
