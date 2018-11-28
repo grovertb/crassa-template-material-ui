@@ -8,8 +8,8 @@ self.__precacheManifest = [
     "url": "/crassa-material-ui-template/static/js/runtime~main.967410ed.js"
   },
   {
-    "revision": "8ea133ade6a228234d14",
-    "url": "/crassa-material-ui-template/static/js/main.8ea133ad.chunk.js"
+    "revision": "faf24d8830bd85d664ed",
+    "url": "/crassa-material-ui-template/static/js/main.faf24d88.chunk.js"
   },
   {
     "revision": "815d493d3b74820bd1c8",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/crassa-material-ui-template/static/js/0.dcf5c2f9.chunk.js"
   },
   {
-    "revision": "06daec9949b93e33f58a1c358ef0fab3",
+    "revision": "1b457ef1a6d0d8a2c9799d4242178fba",
     "url": "/crassa-material-ui-template/index.html"
   }
 ];

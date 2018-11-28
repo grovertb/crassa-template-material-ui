@@ -1,8 +1,8 @@
 {
   "static/js/0.dcf5c2f9.chunk.js": "/crassa-material-ui-template/static/js/0.dcf5c2f9.chunk.js",
   "static/js/0.dcf5c2f9.chunk.js.map": "/crassa-material-ui-template/static/js/0.dcf5c2f9.chunk.js.map",
-  "main.js": "/crassa-material-ui-template/static/js/main.8ea133ad.chunk.js",
-  "main.js.map": "/crassa-material-ui-template/static/js/main.8ea133ad.chunk.js.map",
+  "main.js": "/crassa-material-ui-template/static/js/main.faf24d88.chunk.js",
+  "main.js.map": "/crassa-material-ui-template/static/js/main.faf24d88.chunk.js.map",
   "Dashboard.js": "/crassa-material-ui-template/static/js/Dashboard.c226cedd.chunk.js",
   "Dashboard.js.map": "/crassa-material-ui-template/static/js/Dashboard.c226cedd.chunk.js.map",
   "Home.js": "/crassa-material-ui-template/static/js/Home.815d493d.chunk.js",
@@ -15,6 +15,6 @@
   "runtime~main.js.map": "/crassa-material-ui-template/static/js/runtime~main.967410ed.js.map",
   "static/media/logo.svg": "/crassa-material-ui-template/static/media/logo.5d5d9eef.svg",
   "index.html": "/crassa-material-ui-template/index.html",
-  "precache-manifest.d0f84ac5a8a305ca89fd4f4f5a9a5c84.js": "/crassa-material-ui-template/precache-manifest.d0f84ac5a8a305ca89fd4f4f5a9a5c84.js",
+  "precache-manifest.165901581701371a15710c3bbf1bee9a.js": "/crassa-material-ui-template/precache-manifest.165901581701371a15710c3bbf1bee9a.js",
   "service-worker.js": "/crassa-material-ui-template/service-worker.js"
 }
