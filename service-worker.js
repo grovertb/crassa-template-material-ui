@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/crassa-material-ui/precache-manifest.dbf8d69af65df6a2ab471ee6bdd3d0c5.js"
+  "/crassa-material-ui-template/precache-manifest.d0f84ac5a8a305ca89fd4f4f5a9a5c84.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/crassa-material-ui/index.html", {
+workbox.routing.registerNavigationRoute("/crassa-material-ui-template/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
