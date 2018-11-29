@@ -25,9 +25,15 @@ class Root extends Component {
       theme: { style }
     } = nextProps
 
-    if(this.props.theme.style !== style) muiTheme = createMuiTheme(MaterialTheme[style])
+    if(this.props.theme.style !== style) {
+      muiTheme = createMuiTheme(MaterialTheme[style])
 
-    return true
+      return true
+    } else {
+
+      return false
+    }
+
   }
 
   render() {
