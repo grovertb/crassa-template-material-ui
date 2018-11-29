@@ -1,5 +1,7 @@
-import base from './base'
 import produce from 'immer'
+import Cookies from 'js-cookie'
+
+import base from './base'
 
 export default base({
   namespace   : 'crassa',
@@ -13,14 +15,12 @@ export default base({
     produce(state, draft => {
       switch (action.type) {
         case types.UPDATE_THEME:
-          localStorage.setItem('style', action.theme)
+          Cookies.set('style', action.theme)
+          draft.style = action.theme
 
-          return {
-            ...state,
-            style: action.theme
-          }
+          return
         default:
-          draft.style = typeof window !== 'undefined' ? localStorage.getItem('style') || state.style : state.style
+          draft.style =  Cookies.get('style') || state.style
 
           return
       }
