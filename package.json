@@ -54,7 +54,7 @@
   "dependencies": {
     "@material-ui/core": "3.6.0",
     "@material-ui/icons": "3.0.1",
-    "crassa": "0.5.2",
+    "crassa": "{-- project-version --}",
     "axios": "0.18.0",
     "axios-debug-log": "0.4.0",
     "extensible-duck": "1.4.0",
