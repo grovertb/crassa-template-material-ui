@@ -11,7 +11,7 @@ export default async function(req, res, next) {
 
   // Resave new store
   res.locals.store = store
-  
+
   // Pass middlerware
   next()
 }

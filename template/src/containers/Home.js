@@ -10,7 +10,7 @@ import Switch from '@material-ui/core/Switch'
 import Typography from '@material-ui/core/Typography'
 
 import themeReducer from 'reducers/theme'
-import logo from 'sources/logo.svg'
+import logo from 'assets/img/logo.svg'
 
 const styles = (/* theme */) => ({
   appContainer: {

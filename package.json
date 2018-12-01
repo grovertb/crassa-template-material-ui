@@ -26,7 +26,7 @@
       "components": "./src/components",
       "containers": "./src/containers",
       "api": "./src/api",
-      "sources": "./src/sources"
+      "assets": "./src/assets"
     }
   },
   "_moduleAliases": {
@@ -37,7 +37,7 @@
     "components": "./src/components",
     "containers": "./src/containers",
     "api": "./src/api",
-    "sources": "./src/sources"
+    "assets": "./src/assets"
   },
   "jest": {
     "moduleNameMapper": {
@@ -48,7 +48,7 @@
       "components": "<rootDir>/src/components",
       "containers": "<rootDir>/src/containers",
       "api": "<rootDir>/src/api",
-      "sources": "<rootDir>/src/sources"
+      "assets": "<rootDir>/src/assets"
     }
   },
   "dependencies": {
@@ -59,6 +59,7 @@
     "axios-debug-log": "0.4.0",
     "extensible-duck": "1.4.0",
     "js-cookie": "2.2.0",
+    "mysql": "2.16.0",
     "react": "16.6.3",
     "react-dom": "16.6.3",
     "react-helmet": "5.2.0",
