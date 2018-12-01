@@ -12,7 +12,7 @@ const render = (Component, type) => {
     <AppContainer key={Math.random()}>
       <Component />
     </AppContainer>,
-    document.body
+    document.getElementById('root')
   )
 }
 
