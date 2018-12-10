@@ -19,7 +19,7 @@ export const setRenderUniversal = (html, app, store) => {
   const theme = createMuiTheme(MaterialTheme[style])
   const generateClassName = createGenerateClassName()
 
-  const routeMarkup = renderToString(
+  const renderString = renderToString(
     <JssProvider generateClassName={generateClassName} registry={sheetsRegistry}>
       <MuiThemeProvider sheetsManager={sheetsManager} theme={theme}>
         <Fragment>
@@ -33,7 +33,7 @@ export const setRenderUniversal = (html, app, store) => {
   const materialStyle = `<style id="jss-server-side">${sheetsRegistry.toString()}</style>`
 
   return {
-    routeMarkup,
-    prevHtml: html.replace('<head>', `<head>${materialStyle}`)
+    prevHtml: html.replace('<head>', `<head>${materialStyle}`),
+    renderString
   }
 }
