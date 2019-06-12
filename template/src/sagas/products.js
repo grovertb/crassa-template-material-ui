@@ -9,7 +9,7 @@ function* getProducts() {
   try {
     yield put({ type: types.FETCH_PENDING })
     const payload = yield call(Get, 'products')
-    yield put({ type: types.FETCH_FULFILLED, payload })
+    yield put({ payload, type: types.FETCH_FULFILLED })
   } catch (err) {
     console.log('getProducts err: ', err)
   }

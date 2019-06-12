@@ -4,13 +4,15 @@ import Cookies from 'js-cookie'
 import base from './base'
 
 export default base({
-  namespace   : 'crassa',
-  store       : 'theme',
   initialState: {
     style: 'ligth'
-  }
+  },
+  namespace: 'crassa',
+  store    : 'theme'
 }).extend({
-  types  : [ 'UPDATE_THEME' ],
+  creators: ({ types: { UPDATE_THEME } }) => ({
+    updateTheme: theme => ({ theme, type: UPDATE_THEME })
+  }),
   reducer: (state, action, { types }) =>
     produce(state, draft => {
       switch (action.type) {
@@ -25,7 +27,5 @@ export default base({
           return
       }
     }),
-  creators: ({ types: { UPDATE_THEME } }) => ({
-    updateTheme: theme => ({ type: UPDATE_THEME, theme })
-  })
+  types: [ 'UPDATE_THEME' ]
 })

@@ -1,13 +1,13 @@
 import mysql from 'mysql'
 
 const configure = {
-  user              : 'youuserdb',
-  host              : 'youipdb',
-  password          : 'youpassdb',
-  database          : 'younamedb',
   connectionLimit   : 400,
+  database          : 'younamedb',
+  host              : 'youipdb',
+  multipleStatements: false,
+  password          : 'youpassdb',
   port              : 3306,
-  multipleStatements: false
+  user              : 'youuserdb'
 }
 
 const cnx = mysql.createPool(configure)

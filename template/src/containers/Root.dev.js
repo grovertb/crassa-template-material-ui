@@ -30,10 +30,8 @@ class Root extends Component {
 
       return true
     } else {
-
       return false
     }
-
   }
 
   render() {

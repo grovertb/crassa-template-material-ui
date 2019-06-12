@@ -3,46 +3,16 @@ import produce from 'immer'
 
 export default function createDuck({ namespace, store, initialState = {}, creators, selectors }) {
   return new Duck({
-    namespace,
-    store,
     consts: {
       statuses: [ 'NEW', 'LOADING', 'READY', 'SAVING', 'SAVED', 'DELETED', 'ERROR', 'CANCEL', 'EDITING' ]
     },
-    types: [
-      'REMOVE',
-      'UPDATE',
-      'FETCH',
-      'FETCH_PENDING',
-      'FETCH_FULFILLED',
-      'FETCH_FAILURE',
-      'FETCH_CANCEL',
-      'FETCH_FOR_PATH',
-      'FETCH_FOR_PATH_PENDING',
-      'FETCH_FOR_PATH_FULFILLED',
-      'FETCH_FOR_PATH_FAILURE',
-      'PUT',
-      'PUT_PENDING',
-      'PUT_FULFILLED',
-      'PUT_FAILURE',
-      'PUT_CANCEL',
-      'PUT',
-      'POST',
-      'POST_PENDING',
-      'POST_FULFILLED',
-      'POST_FAILURE',
-      'POST_CANCEL',
-      'DELETE',
-      'DELETE_PENDING',
-      'DELETE_FULFILLED',
-      'DELETE_FAILURE',
-      'DELETE_CANCEL',
-      'RESET',
-      'PATCH',
-      'PATCH_PENDING',
-      'PATCH_FULFILLED',
-      'PATCH_FAILURE',
-      'PATCH_CANCEL'
-    ],
+    creators,
+    initialState: ({ statuses }) => ({
+      ...initialState,
+      error : null,
+      status: statuses.NEW
+    }),
+    namespace,
     reducer: (state, action, { types, statuses }) => {
       return produce(state, draft => {
         switch (action.type) {
@@ -107,8 +77,8 @@ export default function createDuck({ namespace, store, initialState = {}, creato
           case types.RESET:
             return {
               ...initialState,
-              status: statuses.NEW,
-              error : null
+              error : null,
+              status: statuses.NEW
             }
           default:
             return
@@ -116,11 +86,41 @@ export default function createDuck({ namespace, store, initialState = {}, creato
       })
     },
     selectors,
-    creators,
-    initialState: ({ statuses }) => ({
-      ...initialState,
-      status: statuses.NEW,
-      error : null
-    })
+    store,
+    types: [
+      'REMOVE',
+      'UPDATE',
+      'FETCH',
+      'FETCH_PENDING',
+      'FETCH_FULFILLED',
+      'FETCH_FAILURE',
+      'FETCH_CANCEL',
+      'FETCH_FOR_PATH',
+      'FETCH_FOR_PATH_PENDING',
+      'FETCH_FOR_PATH_FULFILLED',
+      'FETCH_FOR_PATH_FAILURE',
+      'PUT',
+      'PUT_PENDING',
+      'PUT_FULFILLED',
+      'PUT_FAILURE',
+      'PUT_CANCEL',
+      'PUT',
+      'POST',
+      'POST_PENDING',
+      'POST_FULFILLED',
+      'POST_FAILURE',
+      'POST_CANCEL',
+      'DELETE',
+      'DELETE_PENDING',
+      'DELETE_FULFILLED',
+      'DELETE_FAILURE',
+      'DELETE_CANCEL',
+      'RESET',
+      'PATCH',
+      'PATCH_PENDING',
+      'PATCH_FULFILLED',
+      'PATCH_FAILURE',
+      'PATCH_CANCEL'
+    ]
   })
 }

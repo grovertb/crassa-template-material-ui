@@ -13,26 +13,6 @@ import themeReducer from 'reducers/theme'
 import logo from 'assets/img/logo.svg'
 
 const styles = (/* theme */) => ({
-  appContainer: {
-    textAlign: 'center'
-  },
-  appLogo: {
-    animation: 'App-logo-spin infinite 20s linear',
-    height   : '40vmin'
-  },
-  appHeader: {
-    backgroundColor: '#282c34',
-    minHeight      : '100vh',
-    display        : 'flex',
-    flexDirection  : 'column',
-    alignItems     : 'center',
-    justifyContent : 'center',
-    fontSize       : 'calc(10px + 2vmin)',
-    color          : 'white'
-  },
-  appLink: {
-    color: '#61dafb'
-  },
   '@keyframes App-logo-spin': {
     from: {
       transform: 'rotate(0deg)'
@@ -40,6 +20,26 @@ const styles = (/* theme */) => ({
     to: {
       transform: 'rotate(360deg)'
     }
+  },
+  appContainer: {
+    textAlign: 'center'
+  },
+  appHeader: {
+    alignItems     : 'center',
+    backgroundColor: '#282c34',
+    color          : 'white',
+    display        : 'flex',
+    flexDirection  : 'column',
+    fontSize       : 'calc(10px + 2vmin)',
+    justifyContent : 'center',
+    minHeight      : '100vh'
+  },
+  appLink: {
+    color: '#61dafb'
+  },
+  appLogo: {
+    animation: 'App-logo-spin infinite 20s linear',
+    height   : '40vmin'
   }
 })
 
@@ -127,8 +127,8 @@ class Home extends Component {
 
 export default connect(
   ({ theme, products }) => ({
-    theme,
-    products
+    products,
+    theme
   }),
   {
     updateTheme: themeReducer.creators.updateTheme

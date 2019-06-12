@@ -5,14 +5,14 @@ export default class Loading extends Component {
     return (
       <div
         style={{
+          alignItems    : 'center',
+          bottom        : 0,
           display       : 'flex',
           justifyContent: 'center',
-          alignItems    : 'center',
+          left          : 0,
           position      : 'absolute',
           right         : 0,
-          left          : 0,
-          top           : 0,
-          bottom        : 0
+          top           : 0
         }}>
         Cargando...
       </div>
