@@ -8,6 +8,7 @@ import ThemeProvider from '@material-ui/styles/ThemeProvider'
 import CssBaseline from '@material-ui/core/CssBaseline'
 
 import MaterialTheme from 'utils/MaterialTheme'
+import { connect } from 'tls';
 
 class RootClient extends Component {
   render() {
@@ -33,5 +34,9 @@ RootClient.propTypes = {
   store: PropTypes.object.isRequired
 }
 
-export default RootClient
+export default connect(
+  ({theme}) => ({
+    theme
+  })
+)(RootClient)
 
