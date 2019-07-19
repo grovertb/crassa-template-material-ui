@@ -1,6 +1,6 @@
 import React, { Component, Fragment  } from 'react'
 import PropTypes from 'prop-types'
-import { Provider } from 'react-redux'
+import { Provider, connect } from 'react-redux'
 import DevTools from '../DevTools'
 
 import { createMuiTheme } from '@material-ui/core/styles'
@@ -8,17 +8,14 @@ import ThemeProvider from '@material-ui/styles/ThemeProvider'
 import CssBaseline from '@material-ui/core/CssBaseline'
 
 import MaterialTheme from 'utils/MaterialTheme'
-import { connect } from 'tls';
 
 class RootClient extends Component {
   render() {
-    const { store, children } = this.props
-
-    const { theme: { style } } = store.getState()
+    const { store, children, theme: { style } } = this.props
 
     return (
       <Provider store={store}>
-        <ThemeProvider  theme={createMuiTheme(MaterialTheme[style])}>
+        <ThemeProvider theme={createMuiTheme(MaterialTheme[style])}>
           <Fragment>
             <CssBaseline />
             <DevTools />
@@ -35,8 +32,6 @@ RootClient.propTypes = {
 }
 
 export default connect(
-  ({theme}) => ({
-    theme
-  })
+  ({ theme }) => ({ theme })
 )(RootClient)
 

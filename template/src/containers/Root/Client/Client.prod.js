@@ -1,6 +1,6 @@
 import React, { Component, Fragment  } from 'react'
 import PropTypes from 'prop-types'
-import { Provider } from 'react-redux'
+import { Provider, connect } from 'react-redux'
 
 import { createMuiTheme } from '@material-ui/core/styles'
 import ThemeProvider from '@material-ui/styles/ThemeProvider'
@@ -15,9 +15,7 @@ class RootClient extends Component {
   }
 
   render() {
-    const { store, children } = this.props
-
-    const { theme: { style } } = store.getState()
+    const { store, children, theme: { style } } = this.props
 
     return (
       <Provider store={store}>
@@ -36,5 +34,7 @@ RootClient.propTypes = {
   store: PropTypes.object.isRequired
 }
 
-export default RootClient
+export default connect(
+  ({ theme }) => ({ theme })
+)(RootClient)
 
