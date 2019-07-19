@@ -21,7 +21,7 @@ class RootClient extends Component {
 
     return (
       <Provider store={store}>
-        <ThemeProvider  theme={createMuiTheme(MaterialTheme[style])}>
+        <ThemeProvider theme={createMuiTheme(MaterialTheme[style])}>
           <Fragment>
             <CssBaseline />
             {children}
@@ -37,4 +37,3 @@ RootClient.propTypes = {
 }
 
 export default RootClient
-
