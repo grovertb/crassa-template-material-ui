@@ -10,10 +10,10 @@ import Switch from '@material-ui/core/Switch'
 import Typography from '@material-ui/core/Typography'
 
 import themeReducer from 'reducers/theme'
-import logo from 'assets/img/logo.svg'
+import logo from 'sources/img/logo.svg'
 
 const styles = (/* theme */) => ({
-  '@keyframes App-logo-spin': {
+  '@keyframes appLogoSpin': {
     from: {
       transform: 'rotate(0deg)'
     },
@@ -38,7 +38,7 @@ const styles = (/* theme */) => ({
     color: '#61dafb'
   },
   appLogo: {
-    animation: 'App-logo-spin infinite 20s linear',
+    animation: '$appLogoSpin infinite 20s linear',
     height   : '40vmin'
   }
 })

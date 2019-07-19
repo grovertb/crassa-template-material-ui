@@ -1,5 +1,5 @@
 import { call, put, takeEvery } from 'redux-saga/effects'
-import { Get } from 'lib/Request'
+import { Get } from 'utils/Request'
 
 import productsDucks from 'reducers/products'
 

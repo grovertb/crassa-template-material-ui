@@ -9,6 +9,7 @@
     "dev": "crassa dev",
     "lint": "crassa lint",
     "count": "crassa count-lines",
+    "prod": "yarn build && yarn start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b gh-pages -d build",
     "lint-staged": "lint-staged"

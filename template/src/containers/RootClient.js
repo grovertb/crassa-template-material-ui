@@ -12,15 +12,15 @@ class RootClient extends Component {
   render() {
     const { store, children } = this.props
 
-    const { theme: { style } } = props.store.getState()
+    const { theme: { style } } = store.getState()
 
     return (
       <Provider store={store}>
         <ThemeProvider  theme={createMuiTheme(MaterialTheme[style])}>
-            <Fragment>
-              <CssBaseline />
-              {children}
-            </Fragment>
+          <Fragment>
+            <CssBaseline />
+            {children}
+          </Fragment>
         </ThemeProvider>
       </Provider>
     )

@@ -11,7 +11,9 @@ import {
 
 import MaterialTheme from 'utils/MaterialTheme'
 
-export const setRenderUniversal = (html, app, store) => {
+export const setRenderUniversal = (locals, app) => {
+  let { htmlData, store } = locals
+
   const { theme: { style } } = store.getState()
 
   const theme = createMuiTheme(MaterialTheme[style])
@@ -29,7 +31,7 @@ export const setRenderUniversal = (html, app, store) => {
   const materialStyle = `<style id="jss-server-side">${sheets.toString()}</style>`
 
   return {
-    prevHtml: html.replace('<head>', `<head>${materialStyle}`),
+    prevHtml: htmlData.replace('<head>', `<head>${materialStyle}`),
     renderString
   }
 }
