@@ -1,6 +1,7 @@
 import React, { Component, Fragment  } from 'react'
 import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
+import DevTools from '../DevTools'
 
 import { createMuiTheme } from '@material-ui/core/styles'
 import ThemeProvider from '@material-ui/styles/ThemeProvider'
@@ -19,6 +20,7 @@ class RootClient extends Component {
         <ThemeProvider  theme={createMuiTheme(MaterialTheme[style])}>
           <Fragment>
             <CssBaseline />
+            <DevTools />
             {children}
           </Fragment>
         </ThemeProvider>

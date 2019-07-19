@@ -4,10 +4,7 @@ import { renderToString } from 'react-dom/server'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
 
-import {
-  ServerStyleSheets,
-  ThemeProvider
-} from '@material-ui/styles'
+import { ServerStyleSheets, ThemeProvider } from '@material-ui/styles'
 
 import MaterialTheme from 'utils/MaterialTheme'
 
@@ -16,12 +13,11 @@ export const setRenderUniversal = (locals, app) => {
 
   const { theme: { style } } = store.getState()
 
-  const theme = createMuiTheme(MaterialTheme[style])
   const sheets = new ServerStyleSheets()
 
   const renderString = renderToString(
     sheets.collect(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={createMuiTheme(MaterialTheme[style])}>
         <CssBaseline />
         {app}
       </ThemeProvider>
