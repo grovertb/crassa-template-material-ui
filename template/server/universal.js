@@ -1,36 +1,32 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { renderToString } from 'react-dom/server'
 
-import { SheetsRegistry } from 'jss'
-import JssProvider from 'react-jss/lib/JssProvider'
-
 import CssBaseline from '@material-ui/core/CssBaseline'
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
-import createGenerateClassName from '@material-ui/core/styles/createGenerateClassName'
 
-import MaterialTheme from 'lib/MaterialTheme'
+import {
+  ServerStyleSheets,
+  ThemeProvider
+} from '@material-ui/styles'
+
+import MaterialTheme from 'utils/MaterialTheme'
 
 export const setRenderUniversal = (html, app, store) => {
   const { theme: { style } } = store.getState()
 
-  const sheetsRegistry = new SheetsRegistry()
-  const sheetsManager = new Map()
   const theme = createMuiTheme(MaterialTheme[style])
-  const generateClassName = createGenerateClassName()
+  const sheets = new ServerStyleSheets()
 
   const renderString = renderToString(
-    <JssProvider generateClassName={generateClassName} registry={sheetsRegistry}>
-      <MuiThemeProvider sheetsManager={sheetsManager} theme={theme}>
-        <Fragment>
-          <CssBaseline />
-          {app}
-        </Fragment>
-      </MuiThemeProvider>
-    </JssProvider>
+    sheets.collect(
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        {app}
+      </ThemeProvider>
+    )
   )
 
-  const materialStyle = `<style id="jss-server-side">${sheetsRegistry.toString()}</style>`
+  const materialStyle = `<style id="jss-server-side">${sheets.toString()}</style>`
 
   return {
     prevHtml: html.replace('<head>', `<head>${materialStyle}`),

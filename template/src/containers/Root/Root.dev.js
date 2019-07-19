@@ -2,14 +2,14 @@ import React, { Component, Fragment } from 'react'
 import { Provider, connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import DevTools from './DevTools'
 
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
 import CssBaseline from '@material-ui/core/CssBaseline'
 
-import MaterialTheme from 'lib/MaterialTheme'
 import themeReducer from 'reducers/theme'
+import DevTools from 'containers/DevTools'
+import MaterialTheme from 'utils/MaterialTheme'
 
 let muiTheme
 

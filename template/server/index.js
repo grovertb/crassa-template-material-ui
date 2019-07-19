@@ -11,8 +11,4 @@ router.use((req, res, next) => {
 
 router.use('/v1', v1)
 
-router.get('/', (req, res) => {
-  res.send('API')
-})
-
 export default router

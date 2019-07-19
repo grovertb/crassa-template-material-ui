@@ -17,27 +17,15 @@
   "author": "",
   "license": "ISC",
   "crassa": {
-    "displayName": "{-- project-name --}",
-    "aliases": {
-      "utils": "./src/utils",
-      "lib": "./src/lib",
-      "reducers": "./src/reducers",
-      "sagas": "./src/sagas",
-      "components": "./src/components",
-      "containers": "./src/containers",
-      "api": "./src/api",
-      "assets": "./src/assets"
-    }
+    "displayName": "{-- project-name --}"
   },
   "_moduleAliases": {
-    "utils": "./src/utils",
-    "lib": "./src/lib",
-    "reducers": "./src/reducers",
-    "sagas": "./src/sagas",
     "components": "./src/components",
     "containers": "./src/containers",
-    "api": "./src/api",
-    "assets": "./src/assets"
+    "reducers": "./src/reducers",
+    "sagas": "./src/sagas",
+    "sources": "./src/sources",
+    "utils": "./src/utils"
   },
   "jest": {
     "moduleNameMapper": {
@@ -52,27 +40,23 @@
     }
   },
   "dependencies": {
-    "@loadable/component": "5.10.1",
-    "@material-ui/core": "4.1.0",
-    "@material-ui/icons": "4.1.0",
+    "@loadable/component": "5.10.2",
+    "@material-ui/core": "4.2.1",
+    "@material-ui/icons": "4.2.1",
     "axios": "0.19.0",
-    "axios-debug-log": "0.6.1",
-    "connected-react-router": "6.4.0",
-    "crassa": "{-- project-version --}",
+    "axios-debug-log": "0.6.2",
+    "connected-react-router": "6.5.2",
+    "crassa": "git+https://github.com/grovertb/crassa.git",
     "extensible-duck": "1.5.0",
     "js-cookie": "2.2.0",
-    "mysql": "2.17.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "react-helmet": "5.2.1",
     "react-hot-loader": "4.11.0",
-    "react-jss": "8.6.1",
     "react-redux": "7.1.0",
     "react-router-dom": "5.0.1",
-    "react-router-redux": "5.0.0-alpha.9",
-    "redux": "4.0.1",
+    "redux": "4.0.4",
     "redux-logger": "3.0.6",
-    "redux-saga": "1.0.3",
+    "redux-saga": "1.0.5",
     "redux-wait-for-action": "0.0.8"
   },
   "devDependencies": {

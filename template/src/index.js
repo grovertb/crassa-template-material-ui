@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { loadableReady } from '@loadable/component'
-// import registerServiceWorker from './registerServiceWorker'
+
 import App from './App'
 
 if(module.hot) module.hot.accept()
@@ -27,5 +27,3 @@ if(module.hot)
   module.hot.accept('./App', () => {
     render(require('./App').default)
   })
-
-// registerServiceWorker()
