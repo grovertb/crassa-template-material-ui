@@ -2,8 +2,8 @@ import React from 'react'
 
 import store, { history } from './store/configureStore'
 import createRoutes from './routes'
-import RootClient from './containers/Root/Client'
+import Root from './containers/Root'
 
 const routes = createRoutes(history)
 
-export default () => <RootClient store={store}>{routes}</RootClient>
+export default () => <Root store={store}>{routes}</Root>

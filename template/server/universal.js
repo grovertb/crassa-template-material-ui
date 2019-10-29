@@ -1,28 +1,12 @@
-import React from 'react'
 import { renderToString } from 'react-dom/server'
-
-import CssBaseline from '@material-ui/core/CssBaseline'
-import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
-
-import { ServerStyleSheets, ThemeProvider } from '@material-ui/styles'
-
-import MaterialTheme from 'utils/MaterialTheme'
+import { ServerStyleSheets } from '@material-ui/styles'
 
 export const setRenderUniversal = (locals, app) => {
-  const { htmlData, store } = locals
-
-  const { theme: { style } } = store.getState()
+  const { htmlData } = locals
 
   const sheets = new ServerStyleSheets()
 
-  const renderString = renderToString(
-    sheets.collect(
-      <ThemeProvider theme={createMuiTheme(MaterialTheme[style])}>
-        <CssBaseline />
-        {app}
-      </ThemeProvider>
-    )
-  )
+  const renderString = renderToString(sheets.collect(app))
 
   const materialStyle = `<style id="jss-server-side">${sheets.toString()}</style>`
 
