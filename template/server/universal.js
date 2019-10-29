@@ -9,7 +9,7 @@ import { ServerStyleSheets, ThemeProvider } from '@material-ui/styles'
 import MaterialTheme from 'utils/MaterialTheme'
 
 export const setRenderUniversal = (locals, app) => {
-  let { htmlData, store } = locals
+  const { htmlData, store } = locals
 
   const { theme: { style } } = store.getState()
 
