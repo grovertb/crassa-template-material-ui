@@ -3,7 +3,7 @@ import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core'
 
 import { Menu as MenuIcon } from '@material-ui/icons'
 
-export default () =>(
+export default (props) =>(
   <>
     <AppBar position='static'>
       <Toolbar>
@@ -15,6 +15,6 @@ export default () =>(
         </Typography>
       </Toolbar>
     </AppBar>
-    {this.props.children}
+    {props.children}
   </>
 )
