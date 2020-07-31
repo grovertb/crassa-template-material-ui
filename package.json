@@ -26,6 +26,7 @@
     "containers": "./src/containers",
     "lib": "./src/lib",
     "reducers": "./src/reducers",
+    "sagas": "./src/sagas",
     "sources": "./src/sources",
     "utils": "./src/utils",
     "server": "./server"
@@ -36,7 +37,8 @@
       "containers": "<rootDir>/src/containers",
       "lib": "<rootDir>/src/lib",
       "reducers": "<rootDir>/src/reducers",
-      "sources": "./src/sources",
+      "sagas": "<rootDir>/src/sagas",
+      "sources": "<rootDir>/src/sources",
       "utils": "<rootDir>/src/utils",
       "server": "<rootDir>/server"
     }
