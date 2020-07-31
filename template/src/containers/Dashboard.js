@@ -1,29 +1,20 @@
-import React, { Component, Fragment } from 'react'
+import React from 'react'
+import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core'
 
-import Typography from '@material-ui/core/Typography'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
+import { Menu as MenuIcon } from '@material-ui/icons'
 
-class Dashboard extends Component {
-  render() {
-    return (
-      <Fragment>
-        <AppBar position='static'>
-          <Toolbar variant='dense'>
-            <IconButton aria-label='Menu' color='inherit'>
-              <MenuIcon />
-            </IconButton>
-            <Typography color='inherit' variant='h5'>
-              crassa-material-ui
-            </Typography>
-          </Toolbar>
-        </AppBar>
-        {this.props.children}
-      </Fragment>
-    )
-  }
-}
-
-export default Dashboard
+export default () =>(
+  <>
+    <AppBar position='static'>
+      <Toolbar>
+        <IconButton aria-label='Menu' color='inherit'>
+          <MenuIcon />
+        </IconButton>
+        <Typography color='inherit' variant='h5'>
+          crassa-material-ui
+        </Typography>
+      </Toolbar>
+    </AppBar>
+    {this.props.children}
+  </>
+)
