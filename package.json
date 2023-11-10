@@ -46,7 +46,7 @@
     "@hot-loader/react-dom": "16.12.0",
     "@material-ui/core": "4.9.5",
     "@material-ui/icons": "4.9.1",
-    "axios": "0.19.2",
+    "axios": "1.6.0",
     "axios-debug-log": "0.7.0",
     "connected-react-router": "6.7.0",
     "extensible-duck": "1.6.0",
